@@ -12,13 +12,12 @@ var it2 = {
     allUsers:0,
     inputDate: new Date() // дата игры
 };
-var check1 = 0;
-var check2 = 0;
-var check3 = 0;
-var check4 = 0;
-var check5 = 0;
-var check6 = 0;
-var f = 0;
+var k1 = 10;
+var k2 = 2;
+var k3 = 3;
+var k4 = 3;
+var k5 = 5;
+var k6 = (-50);
 var counter = setInterval(timer, 1000);
 var count = 0;
 var message = "";
@@ -58,8 +57,9 @@ var k6_left = random_k6_left * 90;
 var k6_top = random_k6_top * 90;
 document.getElementById("k6").style.left =k6_left+"%";
 document.getElementById("k6").style.top =k6_top+"%";
+
 function myFunction_k1() { // рандомное расположение в при клике куб 1
-if (check1 === 0) { it.inputScore = 10;
+    it.inputScore = k1;
     it.inputTotalScore = it.inputTotalScore + it.inputScore;
     random_k1_left = Math.random( );
     random_k1_top = Math.random( );
@@ -68,31 +68,11 @@ if (check1 === 0) { it.inputScore = 10;
     document.getElementById("points").innerHTML = it.inputTotalScore;
     document.getElementById("k1").style.left =k1_left+"%";
     document.getElementById("k1").style.top =k1_top+"%";
-    check1 = check1 + 1;
-}
-    myFunction_K1();
-    random_k1_left = Math.random( );
-    random_k1_top = Math.random( );
-    k1_left = random_k1_left * 90;
-    k1_top = random_k1_top * 90;
-    document.getElementById("points").innerHTML = it.inputTotalScore;
-    document.getElementById("k1").style.left =k1_left+"%";
-    document.getElementById("k1").style.top =k1_top+"%";
-    check1 = check1 + 1;
+    myFunction_ChangeK1();
 }
 function myFunction_k2() {// рандомное расположение в при клике куб 2
-    if (check2 === 0) { it.inputScore = 2;
-        it.inputTotalScore = it.inputTotalScore + it.inputScore;
-        random_k2_left = Math.random( );
-        random_k2_top = Math.random( );
-        k2_left = random_k2_left * 90;
-        k2_top = random_k2_top * 90;
-        document.getElementById("points").innerHTML = it.inputTotalScore;
-        document.getElementById("k2").style.left =k2_left+"%";
-        document.getElementById("k2").style.top =k2_top+"%";
-        check2 = check2 + 1;
-    }
-    myFunction_K2();
+    it.inputScore = k2;
+    it.inputTotalScore = it.inputTotalScore + it.inputScore;
     random_k2_left = Math.random( );
     random_k2_top = Math.random( );
     k2_left = random_k2_left * 90;
@@ -100,22 +80,11 @@ function myFunction_k2() {// рандомное расположение в пр
     document.getElementById("points").innerHTML = it.inputTotalScore;
     document.getElementById("k2").style.left =k2_left+"%";
     document.getElementById("k2").style.top =k2_top+"%";
-    check2 = check2 + 1;
-
+    myFunction_ChangeK2();
 }
 function myFunction_k3() {// рандомное расположение в при клике куб 3
-    if (check3 === 0) { it.inputScore = 3;
-        it.inputTotalScore = it.inputTotalScore + it.inputScore;
-        random_k3_left = Math.random( );
-        random_k3_top = Math.random( );
-        k3_left = random_k3_left * 90;
-        k3_top = random_k3_top * 90;
-        document.getElementById("points").innerHTML = it.inputTotalScore;
-        document.getElementById("k3").style.left =k3_left+"%";
-        document.getElementById("k3").style.top =k3_top+"%";
-        check3 = check3 + 1;
-    }
-    myFunction_K3();
+    it.inputScore = k3;
+    it.inputTotalScore = it.inputTotalScore + it.inputScore;
     random_k3_left = Math.random( );
     random_k3_top = Math.random( );
     k3_left = random_k3_left * 90;
@@ -123,21 +92,11 @@ function myFunction_k3() {// рандомное расположение в пр
     document.getElementById("points").innerHTML = it.inputTotalScore;
     document.getElementById("k3").style.left =k3_left+"%";
     document.getElementById("k3").style.top =k3_top+"%";
-    check3 = check3 + 1;
+    myFunction_ChangeK3();
 }
 function myFunction_k4() {// рандомное расположение в при клике куб 4
-    if (check4 === 0) { it.inputScore = 4;
-        it.inputTotalScore = it.inputTotalScore + it.inputScore;
-        random_k4_left = Math.random( );
-        random_k4_top = Math.random( );
-        k4_left = random_k4_left * 90;
-        k4_top = random_k4_top * 90;
-        document.getElementById("points").innerHTML = it.inputTotalScore;
-        document.getElementById("k4").style.left =k4_left+"%";
-        document.getElementById("k4").style.top =k4_top+"%";
-        check4 = check4 + 1;
-    }
-    myFunction_K4();
+    it.inputScore = k4;
+    it.inputTotalScore = it.inputTotalScore + it.inputScore;
     random_k4_left = Math.random( );
     random_k4_top = Math.random( );
     k4_left = random_k4_left * 90;
@@ -145,21 +104,11 @@ function myFunction_k4() {// рандомное расположение в пр
     document.getElementById("points").innerHTML = it.inputTotalScore;
     document.getElementById("k4").style.left =k4_left+"%";
     document.getElementById("k4").style.top =k4_top+"%";
-    check4 = check4 + 1;
+    myFunction_ChangeK4();
 }
 function myFunction_k5() {// рандомное расположение в при клике куб 5
-    if (check5 === 0) { it.inputScore = 5;
-        it.inputTotalScore = it.inputTotalScore + it.inputScore;
-        random_k5_left = Math.random( );
-        random_k5_top = Math.random( );
-        k5_left = random_k5_left * 90;
-        k5_top = random_k5_top * 90;
-        document.getElementById("points").innerHTML = it.inputTotalScore;
-        document.getElementById("k5").style.left =k5_left+"%";
-        document.getElementById("k5").style.top =k5_top+"%";
-        check5 = check5 + 1;
-    }
-    myFunction_K5();
+    it.inputScore = k5;
+    it.inputTotalScore = it.inputTotalScore + it.inputScore;
     random_k5_left = Math.random( );
     random_k5_top = Math.random( );
     k5_left = random_k5_left * 90;
@@ -167,21 +116,11 @@ function myFunction_k5() {// рандомное расположение в пр
     document.getElementById("points").innerHTML = it.inputTotalScore;
     document.getElementById("k5").style.left =k5_left+"%";
     document.getElementById("k5").style.top =k5_top+"%";
-    check5 = check5 + 1;
+    myFunction_ChangeK5();
 }
-function myFunction_k6() {// рандомное расположение в при клике куб 6
-    if (check6 === 0) { it.inputScore = -50;
-        it.inputTotalScore = it.inputTotalScore + it.inputScore;
-        random_k6_left = Math.random( );
-        random_k6_top = Math.random( );
-        k6_left = random_k6_left * 90;
-        k6_top = random_k6_top * 90;
-        document.getElementById("points").innerHTML = it.inputTotalScore;
-        document.getElementById("k6").style.left =k6_left+"%";
-        document.getElementById("k6").style.top =k6_top+"%";
-        check6 = check6 + 1;
-    }
-    myFunction_K6();
+function myFunction_k6() {// рандомное расположение в при клике куб 5
+    it.inputScore = k6;
+    it.inputTotalScore = it.inputTotalScore + it.inputScore;
     random_k6_left = Math.random( );
     random_k6_top = Math.random( );
     k6_left = random_k6_left * 90;
@@ -189,7 +128,7 @@ function myFunction_k6() {// рандомное расположение в пр
     document.getElementById("points").innerHTML = it.inputTotalScore;
     document.getElementById("k6").style.left =k6_left+"%";
     document.getElementById("k6").style.top =k6_top+"%";
-    check6 = check6 + 1;
+    myFunction_ChangeK6();
 }
 function myFunction_Stop() {
     count = 0;
@@ -406,141 +345,121 @@ function myFunction_Read() {
     document.getElementById("yy4").style.width = dat4.inputTotalScore/7 + "%";
     document.getElementById("yy5").style.width = dat5.inputTotalScore/7 + "%";
 }
- //число рандом 0-6
-    function myFunction_F(){
-    f = Math.random();
+// подмена кнопки к1
+function myFunction_ChangeK1() {
+    var r = myFunction_Randome_0_7();
+    if (r===0) {k1 = 100;
+        document.getElementById("k1").style.background = "yellow";}
+    if (r===1) {k1 = 10;
+        document.getElementById("k1").style.background = "green";}
+    if (r===2) {k1 = 2;
+        document.getElementById("k1").style.background = "red";}
+    if (r===3) {k1 = 3;
+        document.getElementById("k1").style.background = "blue";}
+    if (r===4) {k1 = 4;
+        document.getElementById("k1").style.background = "grey";}
+    if (r===5) {k1 = 5;
+        document.getElementById("k1").style.background = "orange";}
+    if (r===6) {k1 = (-50);
+        document.getElementById("k1").style.background = "black";}
+}
+// подмена кнопки к2
+function myFunction_ChangeK2() {
+    var r = myFunction_Randome_0_7();
+    if (r===0) {k2 = 100;
+        document.getElementById("k2").style.background = "yellow";}
+    if (r===1) {k2 = 10;
+        document.getElementById("k2").style.background = "green";}
+    if (r===2) {k2 = 2;
+        document.getElementById("k2").style.background = "red";}
+    if (r===3) {k2 = 3;
+        document.getElementById("k2").style.background = "blue";}
+    if (r===4) {k2 = 4;
+        document.getElementById("k2").style.background = "grey";}
+    if (r===5) {k2 = 5;
+        document.getElementById("k2").style.background = "orange";}
+    if (r===6) {k2 = (-50);
+        document.getElementById("k2").style.background = "black";}
+}
+// подмена кнопки к3
+function myFunction_ChangeK3() {
+    var r = myFunction_Randome_0_7();
+    if (r===0) {k3 = 100;
+        document.getElementById("k3").style.background = "yellow";}
+    if (r===1) {k3 = 10;
+        document.getElementById("k3").style.background = "green";}
+    if (r===2) {k3 = 2;
+        document.getElementById("k3").style.background = "red";}
+    if (r===3) {k3 = 3;
+        document.getElementById("k3").style.background = "blue";}
+    if (r===4) {k3 = 4;
+        document.getElementById("k3").style.background = "grey";}
+    if (r===5) {k3 = 5;
+        document.getElementById("k3").style.background = "orange";}
+    if (r===6) {k3 = (-50);
+        document.getElementById("k3").style.background = "black";}
+}
+// подмена кнопки к4
+function myFunction_ChangeK4() {
+    var r = myFunction_Randome_0_7();
+    if (r===0) {k4 = 100;
+        document.getElementById("k4").style.background = "yellow";}
+    if (r===1) {k4 = 10;
+        document.getElementById("k4").style.background = "green";}
+    if (r===2) {k4 = 2;
+        document.getElementById("k4").style.background = "red";}
+    if (r===3) {k4 = 3;
+        document.getElementById("k4").style.background = "blue";}
+    if (r===4) {k4 = 4;
+        document.getElementById("k4").style.background = "grey";}
+    if (r===5) {k4 = 5;
+        document.getElementById("k4").style.background = "orange";}
+    if (r===6) {k4 = (-50);
+        document.getElementById("k4").style.background = "black";}
+}
+// подмена кнопки к5
+function myFunction_ChangeK5() {
+    var r = myFunction_Randome_0_7();
+    if (r===0) {k5 = 100;
+        document.getElementById("k5").style.background = "yellow";}
+    if (r===1) {k5 = 10;
+        document.getElementById("k5").style.background = "green";}
+    if (r===2) {k5 = 2;
+        document.getElementById("k5").style.background = "red";}
+    if (r===3) {k5 = 3;
+        document.getElementById("k5").style.background = "blue";}
+    if (r===4) {k5 = 4;
+        document.getElementById("k5").style.background = "grey";}
+    if (r===5) {k5 = 5;
+        document.getElementById("k5").style.background = "orange";}
+    if (r===6) {k5 = (-50);
+        document.getElementById("k5").style.background = "black";}
+}
+// подмена кнопки к6
+function myFunction_ChangeK6() {
+    var r = myFunction_Randome_0_7();
+    if (r===0) {k6 = 100;
+        document.getElementById("k6").style.background = "yellow";}
+    if (r===1) {k6 = 10;
+        document.getElementById("k6").style.background = "green";}
+    if (r===2) {k6 = 2;
+        document.getElementById("k6").style.background = "red";}
+    if (r===3) {k6 = 3;
+        document.getElementById("k6").style.background = "blue";}
+    if (r===4) {k6 = 4;
+        document.getElementById("k6").style.background = "grey";}
+    if (r===5) {k6 = 5;
+        document.getElementById("k6").style.background = "orange";}
+    if (r===6) {k6 = (-50);
+        document.getElementById("k6").style.background = "black";}
+}
+//число рандом 0-7
+function myFunction_Randome_0_7(){
+    var f = Math.random();
     console.log (f);
     f = (f*50);
     f = (f/6>>0);
+    console.log('f', f);
     return f;
 }
-//подмена кнопки 1 рандом 0-6
-function myFunction_K1() {
-        if (check1 > 0) {
-            if (check1 > 1) { it.inputTotalScore = it.inputTotalScore + it.inputScore;}
-               var r = myFunction_F();
-    if (r === 0) {it.inputScore = 100;
-        document.getElementById("k1").style.background = "yellow";}
-    if (r === 1) {it.inputScore = 10;
-        document.getElementById("k1").style.background = "green";}
-    if (r === 2) {it.inputScore = 2;
-        document.getElementById("k1").style.background = "red";}
-    if (r === 3) {it.inputScore = 3;
-        document.getElementById("k1").style.background = "blue";}
-    if (r === 4) {it.inputScore = 4;
-        document.getElementById("k1").style.background = "grey";}
-    if (r === 5) {it.inputScore = 5;
-        document.getElementById("k1").style.background = "orange";}
-    if (r === 6) {it.inputScore = -50;
-        document.getElementById("k1").style.background = "black";}
-        }
-    }
-//подмена кнопки 2 рандом 0-6
-function myFunction_K2() {
-    if (check2 > 0) {
-        if (check2 > 1) { it.inputTotalScore = it.inputTotalScore + it.inputScore;}
-        var r = myFunction_F();
-        if (r === 0) {it.inputScore = 100;
-            document.getElementById("k2").style.background = "yellow";}
-        if (r === 1) {it.inputScore = 10;
-            document.getElementById("k2").style.background = "green";}
-        if (r === 2) {it.inputScore = 2;
-            document.getElementById("k2").style.background = "red";}
-        if (r === 3) {it.inputScore = 3;
-            document.getElementById("k2").style.background = "blue";}
-        if (r === 4) {it.inputScore = 4;
-            document.getElementById("k2").style.background = "grey";}
-        if (r === 5) {it.inputScore = 5;
-            document.getElementById("k2").style.background = "orange";}
-        if (r === 6) {it.inputScore = -50;
-            document.getElementById("k2").style.background = "black";}
-    }
-}
-//подмена кнопки 3 рандом 0-6
-function myFunction_K3() {
-    if (check3 > 0) {
-        if (check3 > 1) { it.inputTotalScore = it.inputTotalScore + it.inputScore;}
-        var r = myFunction_F();
-        if (r === 0) {it.inputScore = 100;
-            document.getElementById("k3").style.background = "yellow";}
-        if (r === 1) {it.inputScore = 10;
-            document.getElementById("k3").style.background = "green";}
-        if (r === 2) {it.inputScore = 2;
-            document.getElementById("k3").style.background = "red";}
-        if (r === 3) {it.inputScore = 3;
-            document.getElementById("k3").style.background = "blue";}
-        if (r === 4) {it.inputScore = 4;
-            document.getElementById("k3").style.background = "grey";}
-        if (r === 5) {it.inputScore = 5;
-            document.getElementById("k3").style.background = "orange";}
-        if (r === 6) {it.inputScore = -50;
-            document.getElementById("k3").style.background = "black";}
-    }
-}
-//подмена кнопки 4 рандом 0-6
-function myFunction_K4() {
-    if (check4 > 0) {
-        if (check4 > 1) { it.inputTotalScore = it.inputTotalScore + it.inputScore;}
-        var r = myFunction_F();
-        if (r === 0) {it.inputScore = 100;
-            document.getElementById("k4").style.background = "yellow";}
-        if (r === 1) {it.inputScore = 10;
-            document.getElementById("k4").style.background = "green";}
-        if (r === 2) {it.inputScore = 2;
-            document.getElementById("k4").style.background = "red";}
-        if (r === 3) {it.inputScore = 3;
-            document.getElementById("k4").style.background = "blue";}
-        if (r === 4) {it.inputScore = 4;
-            document.getElementById("k4").style.background = "grey";}
-        if (r === 5) {it.inputScore = 5;
-            document.getElementById("k4").style.background = "orange";}
-        if (r === 6) {it.inputScore = -50;
-            document.getElementById("k4").style.background = "black";}
-    }
-}
-//подмена кнопки 5 рандом 0-6
-function myFunction_K5() {
-    if (check5 > 0) {
-        if (check5 > 1) { it.inputTotalScore = it.inputTotalScore + it.inputScore;}
-        var r = myFunction_F();
-        if (r === 0) {it.inputScore = 100;
-            document.getElementById("k5").style.background = "yellow";}
-        if (r === 1) {it.inputScore = 10;
-            document.getElementById("k5").style.background = "green";}
-        if (r === 2) {it.inputScore = 2;
-            document.getElementById("k5").style.background = "red";}
-        if (r === 3) {it.inputScore = 3;
-            document.getElementById("k5").style.background = "blue";}
-        if (r === 4) {it.inputScore = 4;
-            document.getElementById("k5").style.background = "grey";}
-        if (r === 5) {it.inputScore = 5;
-            document.getElementById("k5").style.background = "orange";}
-        if (r === 6) {it.inputScore = -50;
-            document.getElementById("k5").style.background = "black";}
-    }
-}
-//подмена кнопки 6 рандом 0-6
-function myFunction_K6() {
-    if (check6 > 0) {
-        if (check6 > 1) { it.inputTotalScore = it.inputTotalScore + it.inputScore;}
-        var r = myFunction_F();
-        if (r === 0) {it.inputScore = 100;
-            document.getElementById("k6").style.background = "yellow";}
-        if (r === 1) {it.inputScore = 10;
-            document.getElementById("k6").style.background = "green";}
-        if (r === 2) {it.inputScore = 2;
-            document.getElementById("k6").style.background = "red";}
-        if (r === 3) {it.inputScore = 3;
-            document.getElementById("k6").style.background = "blue";}
-        if (r === 4) {it.inputScore = 4;
-            document.getElementById("k6").style.background = "grey";}
-        if (r === 5) {it.inputScore = 5;
-            document.getElementById("k6").style.background = "orange";}
-        if (r === 6) {it.inputScore = -50;
-            document.getElementById("k6").style.background = "black";}
-    }
-}
-
-
-
 
