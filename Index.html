@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pali4 Game</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="myModalBox" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Заголовок модального окна -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Сохранение результатов игры...</h4>
+            </div>
+            <!-- Основное содержимое модального окна -->
+            <div  class="modal-body">
+                <p id="modal_save" >Ваш результат: </p>
+                <p>Name: <input id="pName" type="text" maxlength="11" placeholder="Введите имя"></p>
+            </div>
+            <!-- Футер модального окна -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть без сохранения</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="myFunction_Save()">Сохранить результат</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+<div class="box1">
+    <div class="box1_1">
+        <div class="box1_1_1">
+            <div class="text">Pali4 game</div>
+        </div>
+        <div class="box1_1_2">
+            <div class="box1_1_2_1">
+                <div class="box1_1_2_1_1">
+                    <div class="text3"><button id="b1-s" class="btn btn-primary" onclick="myFunction_Start()">Start</button></div>
+                    <div class="text3"><button id="b1-p" class="btn btn-primary" onclick="myFunction_Pause()">Pause</button></div>
+                </div>
+                <div class="box1_1_2_1_2">
+                    <div class="text3"> <button id="b2" class="btn btn-primary" onclick="myFunction_NewGame()">new game</button></div>
+                </div>
+            </div>
+            <div class="box1_1_2_2">
+                <div class="box1_1_2_2_1">
+                    <div class="text2"><div>points:</div><div class="poi" id="points"> - - - </div>
+                    </div>
+                </div>
+                <div class="box1_1_2_2_2">
+                    <div class="text2"><div>time left:</div><div class="poi" id="gametime">01m : 00s</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box1_2">
+        <div class="pole">
+            <button id="k1" class="kubik_1 kub" onclick="myFunction_k1()"></button>
+            <button id="k2" class="kubik_2 kub" onclick="myFunction_k2()"></button>
+            <button id="k3" class="kubik_3 kub" onclick="myFunction_k3()"></button>
+            <button id="k4" class="kubik_4 kub" onclick="myFunction_k4()"></button>
+            <button id="k5" class="kubik_5 kub" onclick="myFunction_k5()"></button>
+            <button id="k6" class="kubik_6 kub" onclick="myFunction_k6()"></button>
+        </div>
+    </div>
+</div>
+    <div class="box2">
+        <div class="box2_1">
+            <div id="y1" class="box2_1_1_name"></div><div class="box2_1_1"><div class="box2_1_2" id="yy1"></div></div>
+            <div id="y2" class="box2_1_1_name"></div><div class="box2_1_1"><div class="box2_1_2" id="yy2"></div></div>
+            <div id="y3" class="box2_1_1_name"></div><div class="box2_1_1"><div class="box2_1_2" id="yy3"></div></div>
+            <div id="y4" class="box2_1_1_name"></div><div class="box2_1_1"><div class="box2_1_2" id="yy4"></div></div>
+            <div id="y5" class="box2_1_1_name"></div><div class="box2_1_1"><div class="box2_1_2" id="yy5"></div></div>
+        </div>
+        <div class="box2_2">
+            <div class="text2">
+                <div class="userScore" id="dat_1"></div>
+                <div class="userScore" id="dat_2"></div>
+                <div class="userScore" id="dat_3"></div>
+                <div class="userScore" id="dat_4"></div>
+                <div class="userScore" id="dat_5"></div>
+                <div class="userScore" id="dat_6"></div>
+                <div class="userScore" id="dat_7"></div>
+                <div class="userScore" id="dat_8"></div>
+                <div class="userScore" id="dat_9"></div>
+                <div class="userScore" id="dat_10"></div>
+                <div class="userScore" id="dat_11"></div>
+                <div class="userScore" id="dat_12"></div>
+                <div class="userScore" id="dat_13"></div>
+                <div class="userScore" id="dat_14"></div>
+                <div class="userScore" id="dat_15"></div>
+                <div class="userScore" id="dat_16"></div>
+                <div class="userScore" id="dat_17"></div>
+                <div class="userScore" id="dat_18"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- pali4.com ссылка внизу страницы) -->
+<div class="pali4com">
+    <a href="http://pali4.com"><img class="pali4" src="http://pali4.com/logo/logoWP6c.png" alt="Made by Pali4"></a>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="https://use.fontawesome.com/a8f2d13194.js"></script>
+</body>
+</html>
